@@ -56,6 +56,18 @@ git clone https://github.com/mohsinzaheer25/splunk-to-dql-skill.git ~/.pi/agent/
 
 Pi also reads `~/.agents/skills/`. Run `/reload` in an open session, or call the skill directly with `/skill:splunk-to-dql`.
 
+**Cursor**
+
+```sh
+git clone https://github.com/mohsinzaheer25/splunk-to-dql-skill.git ~/.cursor/skills/splunk-to-dql
+```
+
+For a single project, clone into `.cursor/skills/splunk-to-dql` inside that project instead. Cursor also reads `.agents/skills/` and `.claude/skills/`, so a copy you installed for another tool works too.
+
+To check that Cursor found it, open **Customize** in the sidebar and go to **Skills**. Cursor applies the skill when a request matches. To call it directly, type `/splunk-to-dql` in Agent chat.
+
+Skills in `~/.cursor/skills/` only run on your machine. To use the skill with Cursor Cloud Agents, turn on **Sync Skills for Cloud Agents**, or install it in the project folder.
+
 **Other tools**
 
 If your tool supports Agent Skills, put the folder where it looks for skills. If it doesn't, you can paste `SKILL.md` into the tool's custom instructions and attach the files in `references/`.
