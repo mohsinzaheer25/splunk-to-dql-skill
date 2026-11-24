@@ -1,0 +1,38 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Windows
+Thumbs.db
+desktop.ini
+
+# Linux
+*~
+.directory
+
+# Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+*.sublime-workspace
+
+# Local agent and harness state
+.claude/settings.local.json
+.pi/
+
+# Packaged builds of the skill (attach these to GitHub releases instead)
+*.zip
+*.skill
+dist/
+
+# Secrets and local notes
+.env
+.env.*
+*.local.md
+scratch/
+
+# Logs
+*.log

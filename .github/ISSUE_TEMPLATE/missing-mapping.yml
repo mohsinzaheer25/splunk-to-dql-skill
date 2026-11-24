@@ -1,0 +1,41 @@
+name: Missing mapping
+description: An SPL command, function, or pattern the skill doesn't cover.
+labels: ["missing mapping"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        This repo is public. Use made-up hosts, IPs, users, IDs, and index names.
+        See the "Made-up data only" section in CONTRIBUTING.md.
+
+  - type: input
+    id: feature
+    attributes:
+      label: SPL command or function
+      placeholder: e.g. streamstats reset_on_change, mvfilter, iplocation
+    validations:
+      required: true
+
+  - type: textarea
+    id: spl
+    attributes:
+      label: Example SPL
+      description: A short search that uses it, with real names replaced.
+      render: spl
+    validations:
+      required: true
+
+  - type: textarea
+    id: dql
+    attributes:
+      label: DQL equivalent (if you know it)
+      description: Include a docs link or a `data record(...)` query if you can.
+      render: dql
+
+  - type: checkboxes
+    id: data
+    attributes:
+      label: Data check
+      options:
+        - label: I replaced all real hosts, IPs, users, IDs, and index names with made-up ones.
+          required: true

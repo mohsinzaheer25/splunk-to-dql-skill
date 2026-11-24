@@ -1,0 +1,55 @@
+name: Wrong conversion
+description: The skill produced DQL that is wrong or returns different results than the SPL.
+labels: ["wrong conversion"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        This repo is public. Use made-up hosts, IPs, users, IDs, and index names.
+        See the "Made-up data only" section in CONTRIBUTING.md.
+
+  - type: textarea
+    id: spl
+    attributes:
+      label: SPL
+      description: The Splunk search, with real names replaced.
+      render: spl
+    validations:
+      required: true
+
+  - type: textarea
+    id: dql
+    attributes:
+      label: DQL the skill produced
+      render: dql
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: What's wrong
+      description: Error message, or how the results differ from Splunk (counts, missing rows, extra rows).
+    validations:
+      required: true
+
+  - type: textarea
+    id: fix
+    attributes:
+      label: Correct DQL (if you know it)
+      description: A docs link or a `data record(...)` query that shows the right behavior helps a lot.
+      render: dql
+
+  - type: input
+    id: agent
+    attributes:
+      label: Agent and model
+      placeholder: e.g. Claude Code with Sonnet, Codex, Pi
+
+  - type: checkboxes
+    id: data
+    attributes:
+      label: Data check
+      options:
+        - label: I replaced all real hosts, IPs, users, IDs, and index names with made-up ones.
+          required: true
