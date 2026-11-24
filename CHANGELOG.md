@@ -4,6 +4,7 @@ Notable changes to this skill. Versions follow [Semantic Versioning](https://sem
 
 ## Unreleased
 
+- README: added install steps for Cursor.
 - Added `references/visualization.md`: how to get side-by-side bars per time bucket in a Dashboard (Categorical bar chart, Vertical layout, Group mode grouped). Tested in a Dashboard.
 - Added OpenPipeline support for logs: `references/openpipeline.md` (when to use it, setup, processors, limits), `references/splunk-ingest-to-openpipeline.md` (`props.conf` and `transforms.conf` mapping), and `references/openpipeline-examples.md` (6 processor examples). Checked against the Dynatrace docs. Not yet run in an environment.
 - Added `references/environment-discovery.md`: read-only lookup queries for agents connected to Dynatrace (for example through the Dynatrace MCP server), with cost and safety rules.
